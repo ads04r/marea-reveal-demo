@@ -3,7 +3,7 @@
 $file = "";
 if(array_key_exists("person", $_GET))
 {
-	$file = "data/" . $_GET['person'] . "_export_results.json";
+	$file = "../data/person_map_" . $_GET['person'] . ".json";
 	if(!(file_exists($file))) { $file = ""; }
 }
 

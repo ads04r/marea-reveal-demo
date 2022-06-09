@@ -1,4 +1,15 @@
-<!doctype html>
+<?php
+
+$i = (int) date("Y");
+$file = "../data/" . $i . "_270e5b36-4d18-4b6e-a7ee-c49e3d301620.json";
+while(!(file_exists($file)))
+{
+	$i--;
+	$file = "../data/" . $i . "_270e5b36-4d18-4b6e-a7ee-c49e3d301620.json";
+}
+$data = json_decode(file_get_contents($file), true);
+
+?><!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -24,8 +35,39 @@
 					</p>
 				</section>
 				<section>
+					<h2>MarEA Research</h2>
+					<table>
+						<tr>
+							<th>Country</th>
+							<th>Sites Documented</th>
+						</tr>
 
-					<section data-background-iframe="https://www.southampton.ac.uk/archaeology/about/staff/gma1y19.page" data-background-interactive data-preload>
+<?php
+
+$country_data = $data['country_role'];
+usort($country_data, function($a, $b) {
+	if($a['sites'] < $b['sites']) { return 1; }
+	if($a['sites'] > $b['sites']) { return -1; }
+	return 0;
+});
+foreach($country_data as $id=>$country)
+{
+	print("\t\t\t\t\t\t<tr>\n");
+	print("\t\t\t\t\t\t\t<td>" . $country['label'] . "</td>\n");
+	print("\t\t\t\t\t\t\t<td>" . $country['sites'] . "</td>\n");
+	print("\t\t\t\t\t\t</tr>\n");
+}
+
+?>
+
+					</table>
+				</section>
+				<section>
+
+					<section>
+						<img src="/data/person_map_georgia.jpg" height="280">
+						<h1>Georgia Andreou</h1>
+						<p>Dr Georgia Andreou is a Research Fellow in Archaeology at the University of Southampton.</p>
 					</section>
 					<section data-background-iframe="/demo/map.php?person=georgia" data-background-interactive data-preload>
 					</section>
@@ -33,7 +75,10 @@
 				</section>
 				<section>
 
-					<section data-background-iframe="https://www.southampton.ac.uk/archaeology/about/staff/rov1y19.page" data-background-interactive data-preload>
+					<section>
+						<img src="/data/person_map_rodrigo.jpg" height="280">
+						<h1>Rodrigo Ortiz Vazquez</h1>
+						<p>Dr Rodrigo Ortiz Vazquez is a Research Fellow in Archaeology at the University of Southampton.</p>
 					</section>
 					<section data-background-iframe="/demo/map.php?person=rodrigo" data-background-interactive data-preload>
 					</section>
@@ -41,7 +86,10 @@
 				</section>
 				<section>
 
-					<section data-background-iframe="https://www.southampton.ac.uk/archaeology/about/staff/ces1u17.page" data-background-interactive data-preload>
+					<section>
+						<img src="/data/person_map_crystal.jpg" height="280">
+						<h1>Crystal El Safadi</h1>
+						<p>Dr Crystal El Safadi is a Senior Research Fellow in Archaeology at the University of Southampton.</p>
 					</section>
 					<section data-background-iframe="/demo/map.php?person=crystal" data-background-interactive data-preload>
 					</section>
