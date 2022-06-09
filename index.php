@@ -65,6 +65,50 @@ foreach($country_data as $id=>$country)
 				<section>
 
 					<section>
+						<img src="/data/person_map_kieran.jpg" height="280">
+						<h1>Kieran Westley</h1>
+						<p>Dr Kieran Westley is a Research Associate at the University of Ulster.</p>
+					</section>
+					<section data-background-iframe="/demo/map.php?person=kieran" data-background-interactive data-preload>
+					</section>
+
+				</section>
+				<section>
+
+					<section>
+						<img src="/data/person_map_crystal.jpg" height="280">
+						<h1>Crystal El Safadi</h1>
+						<p>Dr Crystal El Safadi is a Senior Research Fellow in Archaeology at the University of Southampton.</p>
+					</section>
+					<section data-background-iframe="/demo/map.php?person=crystal" data-background-interactive data-preload>
+					</section>
+
+				</section>
+				<section>
+
+					<section>
+						<img src="/data/person_map_julia.jpg" height="280">
+						<h1>Julia Nikolaus</h1>
+						<p>Dr Julia Nikolaus is a Research Associate at the University of Ulster.</p>
+					</section>
+					<section data-background-iframe="/demo/map.php?person=julia" data-background-interactive data-preload>
+					</section>
+
+				</section>
+				<section>
+
+					<section>
+						<img src="/data/person_map_harmen.jpg" height="280">
+						<h1>Harmen Huigens</h1>
+						<p>Dr Harmen Huigens is a Research Associate at the University of Ulster.</p>
+					</section>
+					<section data-background-iframe="/demo/map.php?person=harmen" data-background-interactive data-preload>
+					</section>
+
+				</section>
+				<section>
+
+					<section>
 						<img src="/data/person_map_georgia.jpg" height="280">
 						<h1>Georgia Andreou</h1>
 						<p>Dr Georgia Andreou is a Research Fellow in Archaeology at the University of Southampton.</p>
@@ -81,17 +125,6 @@ foreach($country_data as $id=>$country)
 						<p>Dr Rodrigo Ortiz Vazquez is a Research Fellow in Archaeology at the University of Southampton.</p>
 					</section>
 					<section data-background-iframe="/demo/map.php?person=rodrigo" data-background-interactive data-preload>
-					</section>
-
-				</section>
-				<section>
-
-					<section>
-						<img src="/data/person_map_crystal.jpg" height="280">
-						<h1>Crystal El Safadi</h1>
-						<p>Dr Crystal El Safadi is a Senior Research Fellow in Archaeology at the University of Southampton.</p>
-					</section>
-					<section data-background-iframe="/demo/map.php?person=crystal" data-background-interactive data-preload>
 					</section>
 
 				</section>
